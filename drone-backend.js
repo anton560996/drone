@@ -22,35 +22,34 @@ function fly(robot) {
     bot.drone.disableEmergency();
     bot.drone.ftrim();
     after(0*1000, function() {
-        bot.drone.takeoff(1);
+        bot.drone.takeoff();
     });
     after(1*1000, function() {
-        bot.drone.takeoff(0);
-        bot.drone.front(1);
-        bot.drone.left(1);
+        bot.drone.front(0.05);
+        bot.drone.left(0.05);
     });
     after(4*1000, function (){
         bot.drone.left(0);
-        bot.drone.front(1);
+        bot.drone.front(0.05);
     });
     after(5*1000, function (){
         bot.drone.left(0);
         bot.drone.front(0);
-        bot.drone.right(1);
+        bot.drone.right(0.05);
     });
     after(9*1000, function (){
         bot.drone.right(0);
-        bot.drone.back(1);
+        bot.drone.back(0.05);
     });
     after(10*1000, function (){
-        bot.drone.back(1);
-        bot.drone.left(1);
+        bot.drone.back(0.05);
+        bot.drone.left(0.05);
     });
     after(13*1000, function() {
-        bot.drone.land(1);
+        bot.drone.land();
     });
     after(14*1000, function() {
-        bot.drone.stop(1);
+        bot.drone.stop();
     });
 }
 
